@@ -8,8 +8,8 @@ class FrondEndController extends Controller
 {
     public function userspage()
     {
-        $user=\App\Models\User::where('status',1)->get();
-        
-        return view('frondend/userpage',compact('user'));
+        $user=\App\Models\User::all();
+        return $user;
+        //return view('frondend/userpage',compact('user'));
     }
 }
